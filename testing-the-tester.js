@@ -14,26 +14,26 @@ function restart () {
 function isGameOver() {
   switch(true) {
 
-    case (grid[0] && grid[1] && grid[2] === 1):
-    case (grid[3] && grid[4] && grid[5] === 1):
-    case (grid[6] && grid[7] && grid[8] === 1):
-    case (grid[0] && grid[3] && grid[6] === 1):
-    case (grid[1] && grid[4] && grid[7] === 1):
-    case (grid[2] && grid[5] && grid[8] === 1):
-    case (grid[0] && grid[4] && grid[8] === 1):
-    case (grid[2] && grid[4] && grid[6] === 1):
+    case (grid[0] === 1 && grid[1] === 1 && grid[2] === 1):
+    case (grid[3] === 1 && grid[4] === 1 && grid[5] === 1):
+    case (grid[6] === 1 && grid[7] === 1 && grid[8] === 1):
+    case (grid[0] === 1 && grid[3] === 1 && grid[6] === 1):
+    case (grid[1] === 1 && grid[4] === 1 && grid[7] === 1):
+    case (grid[2] === 1 && grid[5] === 1 && grid[8] === 1):
+    case (grid[0] === 1 && grid[4] === 1 && grid[8] === 1):
+    case (grid[2] === 1 && grid[4] === 1 && grid[6] === 1):
       winner = 1
       return true
       break;
 
-    case (grid[0] && grid[1] && grid[2] === 2):
-    case (grid[3] && grid[4] && grid[5] === 2):
-    case (grid[6] && grid[7] && grid[8] === 2):
-    case (grid[0] && grid[3] && grid[6] === 2):
-    case (grid[1] && grid[4] && grid[7] === 2):
-    case (grid[2] && grid[5] && grid[8] === 2):
-    case (grid[0] && grid[4] && grid[8] === 2):
-    case (grid[2] && grid[4] && grid[6] === 2):
+    case (grid[0] === 2 && grid[1] === 2 && grid[2] === 2):
+    case (grid[3] === 2 && grid[4] === 2 && grid[5] === 2):
+    case (grid[6] === 2 && grid[7] === 2 && grid[8] === 2):
+    case (grid[0] === 2 && grid[3] === 2 && grid[6] === 2):
+    case (grid[1] === 2 && grid[4] === 2 && grid[7] === 2):
+    case (grid[2] === 2 && grid[5] === 2 && grid[8] === 2):
+    case (grid[0] === 2 && grid[4] === 2 && grid[8] === 2):
+    case (grid[2] === 2 && grid[4] === 2 && grid[6] === 2):
       winner = 2
       return true
       break;

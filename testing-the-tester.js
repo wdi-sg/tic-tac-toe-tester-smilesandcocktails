@@ -49,16 +49,26 @@ function isGameOver() {
 }
 
 function whoWon () {
-  if (isGameOver.call(winner) == 1) {
+  console.log ("THIS IS THE WINNER: " + winner )
+  if (winner === 1) {
+    console.log(winner)
+    winner = 0
     return 1
   }
-  else if (isGameOver.call(winner) == 2) {
+  else if (winner === 2) {
+    console.log(winner)
+    winner = 0
     return 2
   }
-  else if (isGameOver.call(winner) == 3) {
+  else if (winner === 3) {
+    console.log(winner)
+    winner = 0
     return 3
   }
+  else {
+    console.log(winner)
   return 0
+  }
 }
 
 function playTurn(index) {

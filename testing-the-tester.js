@@ -38,7 +38,7 @@ function isGameOver() {
       return true
       break;
 
-    case (grid.length = 9):
+    case (turn === 10):
       winner = 3
       return true
       break;
@@ -49,24 +49,20 @@ function isGameOver() {
 }
 
 function whoWon () {
-  console.log ("THIS IS THE WINNER: " + winner )
+  // console.log(winner)
   if (winner === 1) {
-    console.log(winner)
     winner = 0
     return 1
   }
   else if (winner === 2) {
-    console.log(winner)
     winner = 0
     return 2
   }
   else if (winner === 3) {
-    console.log(winner)
     winner = 0
     return 3
   }
   else {
-    console.log(winner)
   return 0
   }
 }
@@ -75,17 +71,12 @@ function playTurn(index) {
   if (grid[index] === 9) {
     if (turn % 2 !== 0) {
       grid[index] = playerOne
-      console.log(grid)
     }
     else {
       grid[index] = playerTwo
-      console.log(grid)
     }
-    isGameOver()
-    console.log("Game Over is " + isGameOver())
     turn++
-
-    // isGameOver()
+    isGameOver()
     return true
   }
   return false

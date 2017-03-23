@@ -6,9 +6,9 @@ $(document).ready(function () {
   var player = 1
 
   $box.on('click', function (e) {
-    // console.log(e)
+    console.log(e)
     var box = e.target
-
+    console.log(e.target)
     // box.textContent = "TICKED BOX"
     console.log(grid)
     playTurn($box.index(e.target))
@@ -20,9 +20,10 @@ $(document).ready(function () {
     else if (xOry === 2) {
       box.textContent = "Y"
     }
-
-    whoWon()
-    isGameOver()
+    if (isGameOver() === true) {
+      alert('Game Over')
+      restart()
+    }
   })
 
 
@@ -59,6 +60,7 @@ $(document).ready(function () {
   function restart () {
     grid = [null, null, null, null, null, null, null, null, null]
     player = 1
+    $box.text('')
   }
 
 
